@@ -1,6 +1,8 @@
 from irc.bot import SingleServerIRCBot
 import os
 
+import command_manager
+
 BOT_NAME = "screepcodebot"
 CHANNEL = "screepcode"
 
@@ -16,7 +18,10 @@ class Bot(SingleServerIRCBot):
 
         super().__init__([(self.HOST, self.PORT, f"oauth:{self.TOKEN}")], self.USERNAME, self.USERNAME)
 
-    def send_message(self, message):
+        self.CommandManager = command_manager.CommandManager()
+        self.CommandManager.get_all_callables()
+
+    def send_message(self, message: str):
         self.connection.privmsg(self.CHANNEL, message)
 
     def on_welcome(self, cxn, event):
@@ -31,8 +36,10 @@ class Bot(SingleServerIRCBot):
         print(event)
         tags = {kvpair["key"]: kvpair["value"] for kvpair in event.tags}
         user = {"name": tags["display-name"], "id": tags["user-id"]}
-        message = event.arguments[0]
+        message: str = event.arguments[0]
 
         if user["name"] != self.USERNAME:
-            # cmds.process(self, user, message.lower())
-            pass
+            if message.startswith("!"):
+                response = self.CommandManager.process_cmd(user, message[1:])
+                if response is not None:
+                    self.send_message(response)
