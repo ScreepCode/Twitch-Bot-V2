@@ -2,6 +2,7 @@ from irc.bot import SingleServerIRCBot
 import os
 
 import command_manager
+import random_lines
 
 BOT_NAME = "screepcodebot"
 CHANNEL = "screepcode"
@@ -20,6 +21,7 @@ class Bot(SingleServerIRCBot):
 
         self.CommandManager = command_manager.CommandManager()
         self.CommandManager.get_all_callables()
+        self.RandomLines = random_lines.RandomLines(self)
 
     def send_message(self, message: str):
         self.connection.privmsg(self.CHANNEL, message)
@@ -34,6 +36,8 @@ class Bot(SingleServerIRCBot):
 
     def on_pubmsg(self, cxn, event):
         print(event)
+        self.RandomLines.increment()
+
         tags = {kvpair["key"]: kvpair["value"] for kvpair in event.tags}
         user = {"name": tags["display-name"], "id": tags["user-id"]}
         message: str = event.arguments[0]
