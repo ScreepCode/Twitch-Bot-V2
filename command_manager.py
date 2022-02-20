@@ -17,7 +17,7 @@ class CommandManager(object):
         cmd = message.split(" ")[0]
         for command in self.cmd_list:
             if cmd in command[2]:
-                resp = getattr(command[0], command[1])()
+                resp = getattr(command[0], command[1])(user, message)
                 return resp
 
         else:
