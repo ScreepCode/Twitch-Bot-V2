@@ -4,14 +4,14 @@ FILENAME = "libs/data/data.json"
 
 
 def load_json(filename=FILENAME):
-    with open(filename) as json_file:
+    with open(filename, encoding="UTF-8") as json_file:
         data = json.load(json_file)
         return data
 
 
 def write_json(json_data, filename=FILENAME):
     json_string = json.dumps(json_data, indent=4)
-    with open(filename, 'w') as outfile:
+    with open(filename, 'w', encoding="UTF-8") as outfile:
         outfile.write(json_string)
 
 
