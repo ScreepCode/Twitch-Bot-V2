@@ -1,28 +1,38 @@
 {
-    "discord" : {
+    "discord": {
         "server-name": "ScreepCodes Community Discord",
         "invite-link": "https://discord.gg/fDTyD82"
     },
     "prime": {
-        "text" : "Hey, auch du kannst mich unterstützen. Prime Abo's sind kostenlos und helfen uns Streamern enorm. Deine Unterstützung hilft bei neuen Projekten. Vielen Dank ^^"
+        "text": "Hey, auch du kannst mich unterstützen. Prime Abo's sind kostenlos und helfen uns Streamern enorm. Deine Unterstützung hilft bei neuen Projekten. Vielen Dank ^^"
     },
     "stream-plan": {
         "text": "lässt die Gedanken kreisen und denkt sich einen Streamplan aus. Fragt da nach. Da weiß jetzt jemand mehr als ich. LUL"
     },
     "support": {
-        "text" : "Dir gefällt mein Content und du möchtest mich dafür unterstützen? Dann kannst du über LINK eine kleine Spende hinterlassen ^^",
-        "link" : "https://www.tipeeestream.com/screepcode/donation"
+        "text": "Dir gefällt mein Content und du möchtest mich dafür unterstützen? Dann kannst du über LINK eine kleine Spende hinterlassen ^^",
+        "link": "https://www.tipeeestream.com/screepcode/donation"
     },
     "project": {
         "text": "Zurzeit wird der Twitch Chat Bot V2 programmiert, basierend auf der Twitch API und Python ^^",
         "link": "https://github.com/ScreepCode/Twitch_Bot_V2",
         "link-text": "Das Repository findest du unter:"
     },
-
     "lines": [
-        {"text": "Mit einem Follow kannst du mich kostenlos unterstützen und mich ein wenig näher an mein Ziel bringen, zu dem ist es kostenlos ^^"},
-        {"cmd": "discord_cmd"},
-        {"cmd": "prime_cmd"},
-        {"cmd": "support_cmd"}
-    ]
+        {
+            "text": "Mit einem Follow kannst du mich kostenlos unterstützen und mich ein wenig näher an mein Ziel bringen, zu dem ist es kostenlos ^^"
+        },
+        {
+            "cmd": "discord_cmd"
+        },
+        {
+            "cmd": "prime_cmd"
+        },
+        {
+            "cmd": "support_cmd"
+        }
+    ],
+    "clash-of-code": {
+        "last-clash": "2308554298e6e62200d5683a9d1619ea1b56b22"
+    }
 }
