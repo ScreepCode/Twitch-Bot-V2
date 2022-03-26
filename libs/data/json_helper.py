@@ -10,7 +10,7 @@ def load_json(filename=FILENAME):
 
 
 def write_json(json_data, filename=FILENAME):
-    json_string = json.dumps(json_data, indent=4)
+    json_string = json.dumps(json_data, indent=4, ensure_ascii=False)
     with open(filename, 'w', encoding="UTF-8") as outfile:
         outfile.write(json_string)
 
