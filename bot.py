@@ -4,7 +4,7 @@ import os
 import command_manager
 import random_lines
 
-BOT_NAME = "screepcodebot"
+BOT_NAME = "screepbot"
 CHANNEL = "screepcode"
 
 

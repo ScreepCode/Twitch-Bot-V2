@@ -1,7 +1,7 @@
 {
     "discord": {
-        "server-name": "ScreepCodes Community Discord",
-        "invite-link": "https://discord.gg/fDTyD82"
+        "server-name": "ScreepCode Community Discord",
+        "invite-link": "https://discord.com/invite/MufTVhn99J"
     },
     "prime": {
         "text": "Hey, auch du kannst mich unterstützen. Prime Abo's sind kostenlos und helfen uns Streamern enorm. Deine Unterstützung hilft bei neuen Projekten. Vielen Dank ^^"
@@ -11,7 +11,7 @@
     },
     "support": {
         "text": "Dir gefällt mein Content und du möchtest mich dafür unterstützen? Dann kannst du über LINK eine kleine Spende hinterlassen ^^",
-        "link": "https://www.tipeeestream.com/screepcode/donation"
+        "link": "https://streamelements.com/screepcode/tip"
     },
     "project": {
         "text": "Zurzeit wird der Twitch Chat Bot V2 programmiert, basierend auf der Twitch API und Python ^^",
